@@ -1,0 +1,21 @@
+payee_id,display_name,risk_tag,first_seen_date
+P2001,ATO PAYMENT,confirmed_scam,2025-11-29
+P2002,Marketplace AU,confirmed_scam,2025-11-09
+P2003,ATO PAYMENT,unknown,2025-10-14
+P2004,TechFix Support,watchlist,2025-12-01
+P2005,CryptoX Exchange,known_good,2025-10-27
+P2006,Telco Billing,watchlist,2025-10-19
+P2007,Telco Billing,known_good,2026-01-06
+P2008,Telco Billing,watchlist,2025-12-22
+P2009,ATO PAYMENT,watchlist,2025-12-06
+P2010,TechFix Support,unknown,2025-11-15
+P2011,Safe Account Pty,watchlist,2025-12-21
+P2012,Safe Account Pty,unknown,2026-01-12
+P2013,Safe Account Pty,confirmed_scam,2026-01-03
+P2014,Safe Account Pty,unknown,2025-12-06
+P2015,Marketplace AU,watchlist,2026-01-02
+P2016,AUS POST,known_good,2026-01-10
+P2017,GiftCard World,confirmed_scam,2025-11-03
+P2018,Safe Account Pty,watchlist,2025-11-27
+P2019,TechFix Support,watchlist,2025-10-11
+P2020,Safe Account Pty,known_good,2025-10-30

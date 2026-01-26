@@ -1,0 +1,28 @@
+[build-system]
+requires=["setuptools>=68"]
+build-backend="setuptools.build_meta"
+
+[project]
+name="scam-triage-langgraph"
+version="0.1.0"
+description="LangGraph + agentic AI demo for retail banking scam triage (OpenAI gpt-4.1-nano)"
+readme="README.md"
+requires-python=">=3.10"
+dependencies=[
+  "openai>=1.40.0",
+  "langgraph>=0.2.0",
+  "langgraph-checkpoint-sqlite>=3.0.0",
+  "pydantic>=2.7.0",
+  "typer>=0.12.3",
+  "rich>=13.7.0",
+  "python-dotenv>=1.0.1",
+]
+
+[project.scripts]
+scam-triage="cli:app"
+
+[tool.setuptools]
+package-dir={""="src"}
+
+[tool.setuptools.packages.find]
+where=["src"]

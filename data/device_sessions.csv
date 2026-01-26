@@ -1,0 +1,93 @@
+session_id,customer_id,timestamp,device_fingerprint,ip_country,ip_city,auth_method,successful
+S40001,U1001,2025-12-09T07:47:00,dfp_b27334d51231edd2,SG,San Jose,biometric,True
+S40002,U1001,2025-12-30T11:10:00,dfp_7d21e9e6cb71a015,AU,San Jose,password,True
+S40003,U1001,2025-12-14T10:42:00,dfp_f437725561658c7a,US,San Jose,password,False
+S40004,U1001,2025-12-13T18:09:00,dfp_06730115e020f671,SG,Singapore,password,True
+S40005,U1001,2025-12-26T04:27:00,dfp_33b8f779d08aa318,AU,San Jose,password+otp,False
+S40006,U1001,2025-12-17T16:46:00,dfp_40f3f942bf023891,SG,San Jose,password+otp,True
+S40007,U1001,2025-12-23T16:47:00,dfp_7cf972b857980ce2,US,Sydney,biometric,True
+S40008,U1001,2025-12-02T20:36:00,dfp_3f94a06e5ae734d1,US,San Jose,biometric,True
+S40009,U1002,2025-12-19T06:26:00,dfp_3c22ab91106443cd,AU,Sydney,password,True
+S40010,U1002,2025-12-21T03:54:00,dfp_83f10a83913da87f,SG,Singapore,biometric,True
+S40011,U1002,2025-12-31T15:04:00,dfp_d05de816dcfc9e2b,US,Manila,biometric,False
+S40012,U1002,2025-12-21T02:07:00,dfp_08201f0ea6dcd262,SG,Sydney,password,True
+S40013,U1002,2025-12-12T06:46:00,dfp_043e1d7499319202,AU,Melbourne,password+otp,True
+S40014,U1002,2025-12-18T08:47:00,dfp_6043e0bc7f4b2f2e,AU,Singapore,password,True
+S40015,U1002,2025-12-10T04:52:00,dfp_5e08687cea44f045,AU,Manila,biometric,True
+S40016,U1002,2025-12-06T09:07:00,dfp_e3d40306c52493d1,US,Singapore,biometric,True
+S40017,U1003,2025-12-30T00:07:00,dfp_76ea73adb6d85b50,PH,San Jose,password,True
+S40018,U1003,2025-12-17T02:22:00,dfp_90855741a5028c6a,PH,San Jose,biometric,True
+S40019,U1003,2025-12-18T05:49:00,dfp_42daf0dec54dd218,AU,Singapore,password,True
+S40020,U1003,2025-12-19T18:15:00,dfp_f726c43167befdae,AU,Melbourne,password+otp,True
+S40021,U1003,2025-12-15T03:10:00,dfp_f1fcba96b593b10d,US,Singapore,password,True
+S40022,U1003,2025-12-30T02:41:00,dfp_e3554b5a0cf9284b,PH,Singapore,password+otp,True
+S40023,U1003,2025-12-13T05:41:00,dfp_7ff2f7da34758911,AU,Singapore,password+otp,True
+S40024,U1003,2025-12-05T22:14:00,dfp_c19ba1d5a7760e42,SG,Singapore,password,False
+S40025,U1004,2025-12-01T21:52:00,dfp_c50a643122024c03,AU,Melbourne,password+otp,True
+S40026,U1004,2025-12-20T21:19:00,dfp_30f4c7247d55c329,AU,San Jose,password,False
+S40027,U1004,2025-12-13T08:07:00,dfp_d9d5d74d45d12558,US,Melbourne,biometric,True
+S40028,U1004,2025-12-26T14:08:00,dfp_7256b95b70c936c6,AU,Manila,password,True
+S40029,U1004,2025-12-12T01:00:00,dfp_591bc8b9db5ff765,AU,Singapore,password,True
+S40030,U1004,2025-12-12T16:47:00,dfp_2f17fff3a8df5a91,AU,Manila,password,True
+S40031,U1004,2025-12-26T08:11:00,dfp_c87473e96e1a911a,AU,Melbourne,password,False
+S40032,U1004,2025-12-27T15:10:00,dfp_51d92f2ec3d75f18,AU,Melbourne,biometric,False
+S40033,U1005,2025-12-11T07:01:00,dfp_d8345c0b9f33c588,AU,Sydney,biometric,True
+S40034,U1005,2025-12-12T09:50:00,dfp_6794e6524f20aff9,SG,San Jose,biometric,True
+S40035,U1005,2025-12-26T07:22:00,dfp_cd8400683c5e349b,AU,San Jose,password,True
+S40036,U1005,2025-12-10T18:22:00,dfp_9f607b18eeace5d0,AU,San Jose,biometric,True
+S40037,U1005,2025-12-07T07:46:00,dfp_acab735ae4afaf7a,SG,Manila,password+otp,True
+S40038,U1005,2025-12-06T01:55:00,dfp_0a4f13e1a839a35f,AU,Melbourne,password,True
+S40039,U1005,2025-12-05T16:49:00,dfp_7fff47c93d371a44,US,Manila,password+otp,True
+S40040,U1005,2025-12-12T16:33:00,dfp_9ca146f9d6baca22,AU,Singapore,password+otp,True
+S40041,U1006,2025-12-24T04:57:00,dfp_c58ca6d914f61f8b,PH,Melbourne,password,False
+S40042,U1006,2025-12-22T11:03:00,dfp_d08047aa5dff0e81,US,Sydney,biometric,True
+S40043,U1006,2025-12-31T04:52:00,dfp_eba7df39da675a61,SG,Sydney,biometric,True
+S40044,U1006,2025-12-26T03:09:00,dfp_9a8c5bc4bf8589ad,PH,Melbourne,password,True
+S40045,U1006,2025-12-17T19:14:00,dfp_355a8bb992ad2429,US,Singapore,biometric,True
+S40046,U1006,2025-12-12T06:54:00,dfp_985eceba202fa542,US,Singapore,password+otp,False
+S40047,U1006,2025-12-28T23:45:00,dfp_e020c68684d29559,AU,Melbourne,password,True
+S40048,U1006,2025-12-30T22:03:00,dfp_0241413141f20767,AU,Melbourne,biometric,True
+S40049,U1007,2025-12-20T21:43:00,dfp_7b6486e77f339b6f,AU,San Jose,password,True
+S40050,U1007,2025-12-08T21:11:00,dfp_c4c9748ff70050f4,US,San Jose,biometric,False
+S40051,U1007,2025-12-22T02:17:00,dfp_0951166c4f2dff0a,AU,Melbourne,password+otp,True
+S40052,U1007,2025-12-02T18:11:00,dfp_e28ee121bc9e6850,AU,Singapore,biometric,False
+S40053,U1007,2025-12-21T19:51:00,dfp_ed7c3973bd7b1008,PH,Melbourne,password,False
+S40054,U1007,2025-12-30T14:44:00,dfp_70181127450a4266,AU,Melbourne,password,True
+S40055,U1007,2025-12-19T00:06:00,dfp_17d17df7257c0a4f,AU,San Jose,password,True
+S40056,U1007,2025-12-18T08:33:00,dfp_efe7220ae767eda2,AU,Manila,password+otp,False
+S40057,U1008,2025-12-23T18:09:00,dfp_f6d82af203fe6e56,US,San Jose,biometric,False
+S40058,U1008,2025-12-30T23:28:00,dfp_ddc7bc871a55cd55,AU,San Jose,password,True
+S40059,U1008,2025-12-25T22:13:00,dfp_21dbad751078cc16,US,Singapore,password+otp,True
+S40060,U1008,2025-12-10T08:20:00,dfp_2d94d9fce45dccf0,AU,Singapore,password,True
+S40061,U1008,2025-12-21T16:33:00,dfp_b1a688dee36d1668,US,Singapore,password,True
+S40062,U1008,2025-12-31T00:22:00,dfp_dcecf1ffb76515bc,SG,Manila,password,True
+S40063,U1008,2025-12-02T16:37:00,dfp_b4c3ff4cc9f771cb,AU,Melbourne,password,False
+S40064,U1008,2025-12-09T17:34:00,dfp_b1c22fd0dcd728a9,SG,San Jose,password,True
+S40065,U1009,2025-12-03T05:09:00,dfp_7903b3b4dd6277bf,AU,Melbourne,password,True
+S40066,U1009,2025-12-27T09:21:00,dfp_b63cf86a6c2c66d8,PH,Singapore,password+otp,True
+S40067,U1009,2025-12-01T15:02:00,dfp_16864d476b5fc945,AU,Singapore,password+otp,True
+S40068,U1009,2025-12-29T01:47:00,dfp_164c04925344b666,AU,Sydney,password,False
+S40069,U1009,2025-12-18T07:56:00,dfp_18450664970b47f3,SG,Singapore,password,True
+S40070,U1009,2025-12-16T19:01:00,dfp_9810ec2b01af9c80,US,Sydney,password,True
+S40071,U1009,2025-12-22T20:02:00,dfp_080fccf789ef8637,AU,Manila,password+otp,True
+S40072,U1009,2025-12-01T05:06:00,dfp_916efb2720884b31,AU,Singapore,biometric,False
+S40073,U1010,2025-12-31T16:51:00,dfp_481f9a74216855af,AU,Melbourne,biometric,True
+S40074,U1010,2025-12-07T18:58:00,dfp_3a054e6e20946409,PH,Singapore,password+otp,True
+S40075,U1010,2025-12-11T05:53:00,dfp_376fc28c5ceae099,AU,Singapore,biometric,False
+S40076,U1010,2025-12-07T19:20:00,dfp_804ff61b8320c8ae,US,Manila,password+otp,False
+S40077,U1010,2025-12-25T02:17:00,dfp_05067b1a25e3f988,AU,San Jose,password+otp,False
+S40078,U1010,2025-12-27T22:07:00,dfp_8cc55b076701f75c,PH,San Jose,biometric,True
+S40079,U1010,2025-12-05T06:21:00,dfp_48ba3d0d5647cd7d,AU,Singapore,password,False
+S40080,U1010,2025-12-29T09:08:00,dfp_4808563238ef38ba,US,Melbourne,password,True
+S40081,U1007,2026-01-02T03:12:00,dfp_d1612933a211e892,PH,Manila,password+otp,True
+S40082,U1010,2026-01-03T03:12:00,dfp_27e935dc6ef9ebb0,NG,Lagos,password+otp,True
+S40083,U1007,2026-01-04T03:12:00,dfp_d7969f9b1c1451fd,US,Manila,password+otp,True
+S40084,U1007,2026-01-05T03:12:00,dfp_ed521d5de2595985,NG,Manila,password+otp,True
+S40085,U1010,2026-01-06T03:12:00,dfp_bda754efc49eacf8,NG,Lagos,password+otp,True
+S40086,U1004,2026-01-07T03:12:00,dfp_6f7f81bff8972e0f,NG,Manila,password+otp,True
+S40087,U1003,2026-01-08T03:12:00,dfp_9de7265c80cb52a7,PH,Lagos,password+otp,True
+S40088,U1003,2026-01-09T03:12:00,dfp_6d387f2168adf8b8,PH,Lagos,password+otp,True
+S40089,U1006,2026-01-10T03:12:00,dfp_13451b5a1045d451,PH,Manila,password+otp,True
+S40090,U1010,2026-01-11T03:12:00,dfp_83bd9d06745ab96a,PH,Lagos,password+otp,True
+S40091,U1006,2026-01-12T03:12:00,dfp_d8d4848eca6b95c6,PH,San Jose,password+otp,True
+S40092,U1004,2026-01-13T03:12:00,dfp_2b688a7272336ba2,US,Lagos,password+otp,True

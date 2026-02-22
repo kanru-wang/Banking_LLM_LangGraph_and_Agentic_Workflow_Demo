@@ -25,6 +25,7 @@ Notice that
 - At the end of a node, the next step is determined.
 - The LLM asks the customer questions depend on (1) case context, (2) existing answers, (3) system prompt, (4) pydantic schema datatype and field description 
 
+<br>
 
 ## Quickstart
 
@@ -68,6 +69,8 @@ Checkpoints are stored in `.\.scam_triage\checkpoints.sqlite` keyed by `thread_i
 scam-triage resume <thread-id>
 ```
 
+<br>
+
 ## Workflow overview
 
 #### Agent
@@ -76,27 +79,29 @@ scam-triage resume <thread-id>
   - Infers scam type/severity
   - Produces immediate safety steps
   - Produces a short list of missing questions to be answered by the customer
-  - Pass to the `collect_customer_info` node or the Fraud Ops agent
+  - Passes to the `collect_customer_info` node or the Fraud Ops agent
 
 #### Human-in-the-loop
 
 - `collect_customer_info` (a node that uses `interrupt()` and wait for customer answers)
   - Pauses to collect missing answers
-  - Pass to the Support agent
+  - Passes to the Support agent again
 
 #### Agent
 
 - **Fraud Ops Agent** (`graph/nodes/fraud_ops.py`)
   - Reads support triage + customer answers
-  - Queries evidence via tools
+  - **Queries evidence via tools**
   - Produces a structured plan of proposed actions
-  - Pass to the `approval` node or `execute_actions` node
+  - Passes to the `approval` node or `execute_actions` node
 
 #### Human-in-the-loop
 
 - `approval` (a node that uses `interrupt()` and wait for the reviewer's approval)
   -  Pauses for approval when the plan contains high-impact actions.
-  -  Pass to the `execute_actions` node
+  -  Passes to the `execute_actions` node
+
+<br>
 
 ## Repo layout
 

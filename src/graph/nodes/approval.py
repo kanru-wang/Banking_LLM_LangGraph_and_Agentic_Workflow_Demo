@@ -6,19 +6,19 @@ from state import GraphState
 
 
 def approval_node(state: GraphState) -> dict[str, object]:
-    plan=state.get("fraud_ops_plan")
+    plan = state.get("fraud_ops_plan")
     if plan is None:
         return {"approved": False}
 
-    req=ApprovalRequest(
+    req = ApprovalRequest(
         summary=plan.risk_summary,
         actions=plan.proposed_actions,
     )
 
-    decision=interrupt({
+    decision = interrupt({
         "type": "approval",
         "request": req.model_dump(),
         "instruction": "Approve execution of the proposed actions? Reply with true or false.",
     })
-    approved=bool(decision)
+    approved = bool(decision)
     return {"approved": approved}

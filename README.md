@@ -11,7 +11,7 @@ Given a customer transcript (chat/call notes), the workflow:
 2. If needed, the graph **pauses** to collect missing customer answers (human-in-the-loop).
 3. **Fraud Ops Agent** pulls internal evidence (transactions, payee profile, device sessions) using local “bank tools”.
 4. Fraud Ops proposes a structured plan of actions; high-impact actions go through an **approval pause**.
-5. Approved actions are “executed” (simulated), and a final customer message is drafted.
+5. Approved actions are executed (**simulated, since this is not our focus**), and a final customer message is drafted.
 
 The point is to model a workflow that is:
 
@@ -19,6 +19,12 @@ The point is to model a workflow that is:
 - **Tool-using** (evidence gathering)
 - **Branching** (different paths based on what the model decides)
 - **Resumable** (SQLite checkpoints, interrupt/resume)
+
+Notice that
+
+- At the end of a node, the next step is determined.
+- The LLM asks the customer questions depend on (1) case context, (2) existing answers, (3) system prompt, (4) pydantic schema datatype and field description 
+
 
 ## Quickstart
 
@@ -64,29 +70,33 @@ scam-triage resume <thread-id>
 
 ## Workflow overview
 
-### Agents
+### Agent
 
 - **Support Agent** (`graph/nodes/support_agent.py`)
   - Infers scam type/severity
   - Produces immediate safety steps
-  - Produces a short list of missing questions
+  - Produces a short list of missing questions to be answered by the customer
+  - Pass to the `collect_customer_info` node or the Fraud Ops agent
+
+### Human-in-the-loop
+
+- `collect_customer_info` (a node that uses `interrupt()` and wait for customer answers)
+  - Pauses to collect missing answers
+  - Pass to the Support agent
+
+### Agent
 
 - **Fraud Ops Agent** (`graph/nodes/fraud_ops.py`)
   - Reads support triage + customer answers
   - Queries evidence via tools
   - Produces a structured plan of proposed actions
+  - Pass to the `approval` node or `execute_actions` node
 
 ### Human-in-the-loop
 
-Two nodes use `interrupt(...)`:
-
-- `collect_customer_info` pauses to collect missing answers.
-- `approval` pauses for approval when the plan contains high-impact actions.
-
-### Routing
-
-Routing is done via **conditional edges** based on `support_next` and `fraud_next` fields in state (set by the agents).
-This avoids “double scheduling” that can happen when mixing unconditional edges with `Command(goto=...)`.
+- `approval` (a node that uses `interrupt()` and wait for the reviewer's approval)
+  -  Pauses for approval when the plan contains high-impact actions.
+  -  Pass to the `execute_actions` node
 
 ## Repo layout
 

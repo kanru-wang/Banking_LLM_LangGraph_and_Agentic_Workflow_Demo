@@ -7,10 +7,10 @@ from state import GraphState
 
 def support_agent_node(state: GraphState, llm: OpenAIStructuredClient) -> dict[str, object]:
     """Customer Support Agent: classify + decide what to ask next."""
-    conversation=state.get("conversation", "")
-    existing_answers=state.get("customer_answers", {})
+    conversation = state.get("conversation", "")
+    existing_answers = state.get("customer_answers", {})
 
-    system=(
+    system = (
         "You are a retail bank customer support agent handling potential scam reports. "
         "Your goals: (1) identify likely scam type, (2) assess severity, "
         "(3) provide immediate safety steps, (4) ask only the most important missing questions. "
@@ -18,7 +18,7 @@ def support_agent_node(state: GraphState, llm: OpenAIStructuredClient) -> dict[s
         "If the customer already provided an answer, do not ask again."
     )
 
-    user_payload={
+    user_payload = {
         "conversation": conversation,
         "existing_answers": existing_answers,
         "linked_transaction_id": state.get("linked_transaction_id"),
@@ -26,17 +26,12 @@ def support_agent_node(state: GraphState, llm: OpenAIStructuredClient) -> dict[s
         "created_date": state.get("created_date"),
     }
 
-    messages=[
+    messages = [
         {"role": "system", "content": system},
         {"role": "user", "content": f"Case context:\n{user_payload}"},
     ]
 
-    triage=llm.parse(messages=messages, schema=SupportTriage)
+    triage = llm.parse(messages=messages, schema=SupportTriage)
 
-    # Small sanity filter: don't ask questions already answered.
-    answered={k for k, v in existing_answers.items() if isinstance(k, str) and str(v).strip()}
-    missing=[q for q in triage.missing_questions if q not in answered]
-    triage=SupportTriage(**{**triage.model_dump(), "missing_questions": missing})
-
-    support_next="fraud_ops" if len(triage.missing_questions)==0 else "collect_customer_info"
+    support_next = "fraud_ops" if len(triage.missing_questions) == 0 else "collect_customer_info"
     return {"support_triage": triage, "support_next": support_next}

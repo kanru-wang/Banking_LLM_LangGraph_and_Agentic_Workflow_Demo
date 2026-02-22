@@ -6,12 +6,12 @@ from state import GraphState
 
 def collect_customer_info_node(state: GraphState) -> dict[str, object]:
     """Pause and collect answers to the Support Agent's questions."""
-    triage=state.get("support_triage")
-    questions=[]
+    triage = state.get("support_triage")
+    questions = []
     if triage is not None:
-        questions=list(triage.missing_questions)
+        questions = list(triage.missing_questions)
 
-    payload={
+    payload = {
         "type": "customer_questions",
         "questions": questions,
         "instruction": (
@@ -19,12 +19,12 @@ def collect_customer_info_node(state: GraphState) -> dict[str, object]:
             "If unknown, write an empty string."
         ),
     }
-    answers=interrupt(payload)
+    answers = interrupt(payload)
     if not isinstance(answers, dict):
         raise ValueError("Resume payload must be a JSON object mapping question->answer.")
 
-    merged=dict(state.get("customer_answers", {}))
+    merged = dict(state.get("customer_answers", {}))
     for k, v in answers.items():
         if isinstance(k, str) and isinstance(v, str):
-            merged[k]=v
+            merged[k] = v
     return {"customer_answers": merged}

@@ -70,7 +70,7 @@ scam-triage resume <thread-id>
 
 ## Workflow overview
 
-### Agent
+#### Agent
 
 - **Support Agent** (`graph/nodes/support_agent.py`)
   - Infers scam type/severity
@@ -78,13 +78,13 @@ scam-triage resume <thread-id>
   - Produces a short list of missing questions to be answered by the customer
   - Pass to the `collect_customer_info` node or the Fraud Ops agent
 
-### Human-in-the-loop
+#### Human-in-the-loop
 
 - `collect_customer_info` (a node that uses `interrupt()` and wait for customer answers)
   - Pauses to collect missing answers
   - Pass to the Support agent
 
-### Agent
+#### Agent
 
 - **Fraud Ops Agent** (`graph/nodes/fraud_ops.py`)
   - Reads support triage + customer answers
@@ -92,7 +92,7 @@ scam-triage resume <thread-id>
   - Produces a structured plan of proposed actions
   - Pass to the `approval` node or `execute_actions` node
 
-### Human-in-the-loop
+#### Human-in-the-loop
 
 - `approval` (a node that uses `interrupt()` and wait for the reviewer's approval)
   -  Pauses for approval when the plan contains high-impact actions.
